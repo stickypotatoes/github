@@ -1,0 +1,12 @@
+{"id": "S01", "text": "Take me off your list.", "verdict": "CONFIRMED", "class": "direct", "basis": "Direct first-person stop, present speaker, caller is the target of the request."}
+{"id": "S02", "text": "Take us off your list.", "verdict": "CONFIRMED", "class": "direct", "basis": "Household plural is still the speaker's own stop."}
+{"id": "S03", "text": "My wife asked me to tell you to stop calling us.", "verdict": "CONFIRMED", "class": "household_relay", "basis": "A stop delivered to the caller in this call binds the dialed household."}
+{"id": "S04", "text": "My sister said not to call her anymore.", "verdict": "POSSIBLE", "class": "third_party_report", "basis": "\"Her\" is unresolved - a third-person pronoun does not prove a different record."}
+{"id": "S05", "text": "She didn't tell me to take me off your list.", "verdict": "NO_STOP", "class": "negation", "basis": "Negated report: the speaker says the stop was never communicated."}
+{"id": "S06", "text": "Oh sure, take me off your list, like I would ever say that.", "verdict": "NO_STOP", "class": "quoted", "basis": "The speaker quotes and rejects the words in the same breath - no adoption."}
+{"id": "S07", "text": "I'm not saying don't call me.", "verdict": "NO_STOP", "class": "negation", "basis": "Explicit disavowal of the stop reading."}
+{"id": "S08", "text": "Don't call me after six.", "verdict": "POSSIBLE_BOUNDARY", "class": "boundary", "basis": "A time limit on contact, recorded as a boundary - never a permanent latch."}
+{"id": "S09", "text": "Stop texting me, but you can still call.", "verdict": "CHANNEL_SCOPED_STOP", "class": "channel_scope", "basis": "The stop binds the texting channel only; calling remains eligible."}
+{"id": "S10", "text": "Don't call me unless it's about the title.", "verdict": "POSSIBLE", "class": "conditional", "basis": "A conditional stop is a scoped hold pending policy, never a blanket DNC."}
+{"id": "S11", "text": "Your office keeps calling me.", "verdict": "POSSIBLE", "class": "candidate_net", "basis": "Caller-bound complaint language opens a hold for review; it is not itself a stop."}
+{"id": "S12", "text": "The note says don't call.", "verdict": "POSSIBLE", "class": "third_party_report", "basis": "A document reporting a request is not the current seller's instruction until resolved."}
