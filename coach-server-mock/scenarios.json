@@ -1,0 +1,37 @@
+{
+  "scenarios": {
+    "clean-turn": {
+      "description": "Two partial revisions, a final transcript, then a turn-complete watermark.",
+      "events": [
+        {"after_seconds": 0, "text": "I might sell", "final": false, "confidence": 0.55},
+        {"after_seconds": 1, "text": "I might sell the house", "final": false, "confidence": 0.74},
+        {"after_seconds": 2, "text": "I might sell the house this year.", "final": true, "confidence": 0.96},
+        {"after_seconds": 2.1, "text": "", "final": true, "confidence": 1.0, "turn_complete": true}
+      ]
+    },
+    "slow-final": {
+      "description": "A partial arrives immediately and the final follows after a long delay.",
+      "events": [
+        {"after_seconds": 0, "text": "We have been thinking", "final": false, "confidence": 0.62},
+        {"after_seconds": 15, "text": "We have been thinking about selling.", "final": true, "confidence": 0.91},
+        {"after_seconds": 15.1, "text": "", "final": true, "confidence": 1.0, "turn_complete": true}
+      ]
+    },
+    "server-dies-mid-call": {
+      "description": "After five seconds from segment submission, health probes receive a closed connection with no HTTP response.",
+      "server_dies_after_seconds": 5,
+      "events": [
+        {"after_seconds": 0, "text": "The property is", "final": false, "confidence": 0.51},
+        {"after_seconds": 8, "text": "The property is vacant.", "final": true, "confidence": 0.88},
+        {"after_seconds": 8.1, "text": "", "final": true, "confidence": 1.0, "turn_complete": true}
+      ]
+    },
+    "static-segment": {
+      "description": "An empty scripted transcript with low confidence.",
+      "events": [
+        {"after_seconds": 0, "text": "", "final": true, "confidence": 0.1},
+        {"after_seconds": 0.1, "text": "", "final": true, "confidence": 0.1, "turn_complete": true}
+      ]
+    }
+  }
+}
